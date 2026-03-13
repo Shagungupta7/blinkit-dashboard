@@ -71,3 +71,23 @@ export const getDeliveryTImeByHour = async () => {
         throw e;
     }
 }   
+
+export const getRevenuePerCity = async () => {
+    try {
+        const response = await axios.get(`${BASE_URL}/revenue-per-city`);
+        return response.data;
+    }catch(e){
+        console.error(e);
+        throw e;
+    }
+}
+
+export const getCancellationPerCity = async () => {
+    try {
+        const response = await axios.get(`${BASE_URL}/cancellation-per-city`);
+        return response.data;
+    }catch(e){
+        console.error(e);
+        throw e;
+    }
+}

@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
-import { getOrderPerDay } from "../services/api";
-import LineChartWrapper from "./shared/LineChartWrapper";
+import { getCancellationPerCity } from "../services/api";
+import BarChartWrapper from "./shared/BarChartWrapper";
 
-function OrderPerDay() {
-
+export default function CancellationPerCity() {
     const [orderData, setOrderData] = useState([]);
-
+        
     useEffect( () => {
         const fetchData = async () => {
-            const data = await getOrderPerDay();
+            const data = await getCancellationPerCity();
             setOrderData(data);
         }
         fetchData();
@@ -16,9 +15,7 @@ function OrderPerDay() {
 
     return(
         <div className="flex flex-col">
-            <LineChartWrapper data={orderData} xaxis="date" yaxis="totalOrder" />
+            <BarChartWrapper data={orderData} xaxis="city" yaxis="rate" />
         </div>
     )
 }
-
-export default OrderPerDay;
