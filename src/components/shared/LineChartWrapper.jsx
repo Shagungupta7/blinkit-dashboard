@@ -27,13 +27,13 @@ function LineChartWrapper({data, xaxis, yaxis}) {
     const end = data[Math.min(data.length-1, selectedRange[0])][xaxis];
     const start = data[Math.min(data.length-1 ,selectedRange[1]-1)][xaxis];
     return(
-        <div className="flex flex-col">
-        <p>{start} -- {end}</p>
+        <div className="flex flex-col bg-white border rounded-md p-3 items-center">
+        <p className="font-inter text-black">{start} -- {end}</p>
         <div className="flex gap-4 w-[200px] p-7">
             <button onClick={handlePrevClick}>prev</button>
             <button onClick={handleNextClick}>Next</button>
         </div>
-            <ResponsiveContainer height={300} width="80%">
+            <ResponsiveContainer height={200} width="100%">
                 <LineChart data={filteredData} responsive >
                     <XAxis dataKey={xaxis}/>
                     <YAxis/>

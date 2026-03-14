@@ -8,12 +8,14 @@ import AvgDeliveryTimePerCity from './components/AvgDeliveryTimePerCity'
 import CancellationPerCity from './components/CancellationPerCity'
 import Top5Riders from './components/Top5Riders'
 import OrdersPerHour from './components/OrdersPerHour'
+import Dashboard from './pages/Dashboard'
 
 function App() {
 
   return (
     <div className='w-full h-auto flex flex-col p-10 gap-4'>
-      <KPI title={"Total Orders"} apifunction={getTotalOrders()}/>
+      <Dashboard />
+      {/* <KPI title={"Total Orders"} apifunction={getTotalOrders()}/>
       <KPI title={"Average Order Value"} apifunction={getAvgOrderValue()} />
       <KPI title={"Cancellation Rate"} apifunction={getCancellationRate()} />
       <OrderPerDay />
@@ -23,7 +25,7 @@ function App() {
       <RevenuePerCity />
       <AvgDeliveryTimePerCity />
       <CancellationPerCity />
-      <Top5Riders />
+      <Top5Riders /> */}
     </div>
   )
 }

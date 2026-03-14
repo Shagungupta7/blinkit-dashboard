@@ -1,3 +1,4 @@
+import { Card, CardContent, Typography } from "@mui/joy";
 import { useEffect, useState } from "react";
 
 function KPI({title, apifunction}) {
@@ -12,10 +13,12 @@ function KPI({title, apifunction}) {
     }, []);
 
     return (
-        <div className="flex flex-col">
-            <h2>{title}</h2>
-            <p>{value}</p>
-        </div>
+        <Card variant="soft" sx={{ width: 220, height: 120 }}>
+            <CardContent>
+                <Typography level="title-md" sx={{ fontSize: 18, textAlign: 'center' }}>{title}</Typography>
+                <Typography sx={{ fontSize: 16, textAlign: 'center' }}>{value}</Typography>
+            </CardContent>
+        </Card>
     );
 }
 
