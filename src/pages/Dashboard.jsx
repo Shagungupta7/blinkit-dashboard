@@ -16,11 +16,19 @@ import { getTotalOrders, getAvgOrderValue, getCancellationRate, getTotalRevenue,
 
 export default function Dashboard() {
     return(
-        <div className="flex flex-col justify-center items-center gap-12 w-full">
-            <div className="text-[40px] font-inter mb-5">
-                BLINKIT ANALYTICS DASHBOARD
-            </div>
-            <div className="flex gap-4 text-[20px]">
+    <div className="flex flex-col justify-center items-center gap-12 w-full">
+                    <div className="flex flex-col items-center mb-10">
+                    <div className="text-3xl font-semibold tracking-wide">
+                        <span className="text-[var(--accent-primary)] drop-shadow-[0_0_12px_rgba(255,225,65,0.45)]">BLINK
+                        </span>
+                        <span className="text-[var(--blinkit-green)] drop-shadow-[0_0_10px_rgba(12,143,95,0.4)]">IT
+                        </span>
+                        <span className="text-[var(--text-secondary)]">{" "}ANALYTICS
+                       </span></div>
+              <div className="w-24 h-[3px] bg-[var(--accent-primary)] mt-3 rounded-full shadow-[0_0_14px_rgba(255,225,65,0.5)]"></div>
+                    </div>
+
+    <div className="flex gap-16 text-[20px]">
                 <KPI title={"Total Orders"} apifunction={getTotalOrders()}/>
                 <KPI title={"Average Order Value"} apifunction={getAvgOrderValue()} />
                 <KPI title={"Cancellation Rate"} apifunction={getCancellationRate()} />
