@@ -1,5 +1,6 @@
 import { Card, CardContent, Typography } from "@mui/joy";
 import { useEffect, useState } from "react";
+import { formatKPIValue } from "../../utils/formatters";
 
 function KPI({ title, apifunction }) {
     const [value, setValue] = useState(0);
@@ -12,25 +13,9 @@ function KPI({ title, apifunction }) {
         fetchData();
     }, []);
 
-    const colorMap = {
-        "Total Orders": {
-            color: "#FFE141",
-            glow: "rgba(255,225,65,0.6)"
-        },
-        "Average Order Value": {
-            color: "#4CAF50",
-            glow: "rgba(76,175,80,0.6)"
-        },
-        "Cancellation Rate": {
-            color: "#FF5C5C",
-            glow: "rgba(255,92,92,0.6)"
-        }
-    };
-
-    const current = colorMap[title] || {
-        color: "#FFFFFF",
-        glow: "rgba(255,255,255,0.3)"
-    };
+    const current = {
+    color: "var(--text-primary)",
+    glow: "rgba(255,255,255,0.25)"};
 
     return (
         <Card
@@ -90,7 +75,7 @@ function KPI({ title, apifunction }) {
                         textShadow: `0 0 16px ${current.glow}`,
                     }}
                 >
-                    {value || 0}
+                    {formatKPIValue(title, value)}
                 </Typography>
             </CardContent>
         </Card>
