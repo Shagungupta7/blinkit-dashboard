@@ -1,18 +1,57 @@
-import { Bar, BarChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, ResponsiveContainer, Tooltip, XAxis, YAxis, CartesianGrid } from "recharts";
 
-export default function BarChartWrapper({data, xaxis, yaxis}) {
-    console.log(data);
-    return(
-        <div className="flex flex-col bg-white border rounded-md p-5 items-center">
+export default function BarChartWrapper({ data, xaxis, yaxis }) {
+    return (
+        <div className="flex flex-col bg-[var(--bg-surface)] border border-white/10 rounded-xl p-5 items-center">
+            
             <ResponsiveContainer height={300} width="100%">
-                <BarChart data={data} > 
-                    <XAxis dataKey={xaxis} />
-                    <YAxis/>
-                    <Bar dataKey={yaxis} barSize={50}/>
-                    <Tooltip />
+                <BarChart data={data}>
+
+                    {/* subtle grid */}
+                    <CartesianGrid stroke="rgba(255,255,255,0.05)" vertical={false} />
+
+                    {/* x axis */}
+                    <XAxis 
+                        dataKey={xaxis} 
+                        stroke="#A0A0A0"
+                        tick={{ fill: "#A0A0A0", fontSize: 12 }}
+                        axisLine={false}
+                        tickLine={false}
+                    />
+
+                    {/* y axis */}
+                    <YAxis 
+                        stroke="#A0A0A0"
+                        tick={{ fill: "#A0A0A0", fontSize: 12 }}
+                        axisLine={false}
+                        tickLine={false}
+                    />
+
+                    {/* actual bars */}
+                    <Bar 
+                        dataKey={yaxis} 
+                        fill="rgba(84,178,38,0.8)"
+                        radius={[8, 8, 0, 0]}
+                        barSize={40}
+                        style={{
+                            filter: "drop-shadow(0px 0px 4px rgba(84,178,38,0.2))"
+                        }}
+                    />
+
+                    {/* tooltip */}
+                    <Tooltip
+                        contentStyle={{
+                            backgroundColor: "#1E1E1E",
+                            border: "none",
+                            borderRadius: "10px",
+                            color: "#fff"
+                        }}
+                        cursor={{ fill: "rgba(255,255,255,0.05)" }}
+                    />
+
                 </BarChart>
             </ResponsiveContainer>
-        </div>  
-    )
 
+        </div>
+    );
 }

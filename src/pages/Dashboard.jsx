@@ -28,7 +28,7 @@ export default function Dashboard() {
               <div className="w-24 h-[3px] bg-[var(--accent-primary)] mt-3 rounded-full shadow-[0_0_14px_rgba(255,225,65,0.5)]"></div>
                     </div>
 
-    <div className="flex gap-16 text-[20px]">
+    <div className="flex justify-center gap-5 w-full px-10">
                 <KPI title={"Total Orders"} apifunction={getTotalOrders()}/>
                 <KPI title={"Average Order Value"} apifunction={getAvgOrderValue()} />
                 <KPI title={"Cancellation Rate"} apifunction={getCancellationRate()} />
