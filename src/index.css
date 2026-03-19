@@ -55,4 +55,232 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}@import "tailwindcss";
+:root {
+  /* BACKGROUND */
+  --bg-main: #121212;
+  --bg-surface: #1E1E1E;
+  --bg-elevated: #2A2A2A;
+
+  /* ACCENT (Blinkit) */
+  --accent-primary: #FFE141;
+  --accent-hover: #FFD600;
+
+  /* TEXT */
+  --text-primary: #FFFFFF;
+  --text-secondary: #A0A0A0;
+  --text-muted: #6B6B6B;
+  --blinkit-green: #0C8F5F;
+
+  /* SEMANTIC */
+  --success: #4CAF50;
+  --danger: #FF5C5C;
+
+  font-family: Inter, system-ui, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}@import "tailwindcss";
+:root {
+  /* BACKGROUND */
+  --bg-main: #121212;
+  --bg-surface: #1E1E1E;
+  --bg-elevated: #2A2A2A;
+
+  /* ACCENT (Blinkit) */
+  --accent-primary: #FFE141;
+  --accent-hover: #FFD600;
+
+  /* TEXT */
+  --text-primary: #FFFFFF;
+  --text-secondary: #A0A0A0;
+  --text-muted: #6B6B6B;
+  --blinkit-green: #0C8F5F;
+
+  /* SEMANTIC */
+  --success: #4CAF50;
+  --danger: #FF5C5C;
+
+  font-family: Inter, system-ui, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}@import "tailwindcss";
+:root {
+  /* BACKGROUND */
+  --bg-main: #121212;
+  --bg-surface: #1E1E1E;
+  --bg-elevated: #2A2A2A;
+
+  /* ACCENT (Blinkit) */
+  --accent-primary: #FFE141;
+  --accent-hover: #FFD600;
+
+  /* TEXT */
+  --text-primary: #FFFFFF;
+  --text-secondary: #A0A0A0;
+  --text-muted: #6B6B6B;
+  --blinkit-green: #0C8F5F;
+
+  /* SEMANTIC */
+  --success: #4CAF50;
+  --danger: #FF5C5C;
+
+  font-family: Inter, system-ui, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}@import "tailwindcss";
+:root {
+  /* BACKGROUND */
+  --bg-main: #121212;
+  --bg-surface: #1E1E1E;
+  --bg-elevated: #2A2A2A;
+
+  /* ACCENT (Blinkit) */
+  --accent-primary: #FFE141;
+  --accent-hover: #FFD600;
+
+  /* TEXT */
+  --text-primary: #FFFFFF;
+  --text-secondary: #A0A0A0;
+  --text-muted: #6B6B6B;
+  --blinkit-green: #0C8F5F;
+
+  /* SEMANTIC */
+  --success: #4CAF50;
+  --danger: #FF5C5C;
+
+  font-family: Inter, system-ui, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }

@@ -23,22 +23,57 @@ function LineChartWrapper({data, xaxis, yaxis}) {
     filteredData.reverse();
 
     console.log(data);
-    if(data.length === 0) return <p>Loading...</p>
+    if(data.length === 0) return <p className="text-[var(--text-secondary)]">Loading...</p>
+
     const end = data[Math.min(data.length-1, selectedRange[0])][xaxis];
     const start = data[Math.min(data.length-1 ,selectedRange[1]-1)][xaxis];
+
     return(
-        <div className="flex flex-col bg-white border rounded-md p-3 items-center">
-        <p className="font-inter text-black">{start} -- {end}</p>
-        <div className="flex gap-4 w-[200px] p-7">
-            <button onClick={handlePrevClick}>prev</button>
-            <button onClick={handleNextClick}>Next</button>
-        </div>
+        <div className="bg-[var(--bg-surface)] border border-white/10 rounded-sm p-4 items-center">
+
+            {/* controls */}
+            <div className="flex gap-4 mb-2 justify-center">
+                <img src="/images/left-arrow.png" className="transition w-4 h-4" onClick={handlePrevClick} />
+                <p className="text-[var(--text-secondary)] text-[12px]">
+                    {start} — {end}
+                </p>
+                <img src="/images/right-arrow.png" className="transition w-4 h-4" onClick={handleNextClick} />
+            </div>
+
             <ResponsiveContainer height={200} width="100%">
                 <LineChart data={filteredData} responsive >
-                    <XAxis dataKey={xaxis}/>
-                    <YAxis/>
-                    <Line dataKey={yaxis} type="monotone" strokeWidth={3} />
-                    <Tooltip />
+
+                    <XAxis 
+                        dataKey={xaxis}
+                        stroke="#A0A0A0"
+                        tick={{ fill: "#A0A0A0", fontSize: 12 }}
+                    />
+
+                    <YAxis
+                        stroke="#A0A0A0"
+                        tick={{ fill: "#A0A0A0", fontSize: 12 }}
+                    />
+
+                    <Line 
+                        dataKey={yaxis} 
+                        type="monotone" 
+                        stroke="#0e9747"
+                        strokeWidth={2}
+                        dot={false}
+                        style={{
+                            filter: "drop-shadow(0px 0px 4px rgba(84,178,38,0.2))"
+                        }}
+                    />
+
+                    <Tooltip
+                        contentStyle={{
+                            backgroundColor: "#1E1E1E",
+                            border: "none",
+                            borderRadius: "8px",
+                            color: "#fff"
+                        }}
+                    />
+
                 </LineChart>
             </ResponsiveContainer>
         </div>

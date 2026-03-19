@@ -16,7 +16,7 @@ export default function OrdersPerPaymentMethod() {
 
     return(
         <div>
-            <PieChartWrapper data={orderData} datakey="totalOrders" name="method"/>
+            <PieChartWrapper data={orderData} datakey="totalOrders" name="method" heading="Orders Per Payment Method"/>
         </div>
     )
 }
