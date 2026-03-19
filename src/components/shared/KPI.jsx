@@ -22,8 +22,8 @@ function KPI({ title, apifunction }) {
             variant="soft"
             sx={{
                 width: 170,
-                height: 80,
-                borderRadius: "10px",
+                height: 78,
+                borderRadius: "4px",
                 background: "var(--bg-surface)",
                 position: "relative",
                 overflow: "hidden",
@@ -37,7 +37,7 @@ function KPI({ title, apifunction }) {
                     position: "absolute",
                     inset: 0,
                     padding: "1px",
-                    borderRadius: "10px",
+                    borderRadius: "4px",
                     background: `linear-gradient(135deg, ${current.color}, transparent)`,
                     WebkitMask:
                         "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",

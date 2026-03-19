@@ -75,10 +75,10 @@ export default function Dashboard() {
             <KPI title={"Average Delivery Time"} apifunction={getAvgDeliveryTime()} />
             <KPI title={"Repeat Customers"} apifunction={getRepeatCustomers()} />
         </div>
-        <div className="flex flex-col flex-1 w-full gap-2">
-            <div className="flex flex-col flex-1 w-full gap-6">
+        <div className="flex flex-col flex-1 w-full">
+            <div className="flex flex-col flex-1 w-full gap-2">
             {/* DEMAND */}
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2">
                 <div className="text-[var(--text-secondary)] text-xs font-semibold tracking-wider">
                     DEMAND
                 </div>
@@ -101,7 +101,7 @@ export default function Dashboard() {
             </div>
 
             {/* OPERATIONAL */}
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2">
                 <div className="text-[var(--text-secondary)] text-xs font-semibold tracking-wider">
                     OPERATIONAL
                 </div>
