@@ -16,7 +16,7 @@ export default function PieChartWrapper({ data, datakey, name, heading }) {
     return (
         <div className="bg-[var(--bg-surface)] border border-white/10 rounded-xl p-4 space-y-4">
             <div className="text-[var(--text-secondary)] text-[16px]">{heading}</div>
-            <ResponsiveContainer height={250} width="100%">
+            <ResponsiveContainer height={225} width="100%">
                 <PieChart>
 
                     <Pie
