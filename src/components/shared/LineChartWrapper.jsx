@@ -29,21 +29,15 @@ function LineChartWrapper({data, xaxis, yaxis}) {
     const start = data[Math.min(data.length-1 ,selectedRange[1]-1)][xaxis];
 
     return(
-        <div className="flex flex-col bg-[var(--bg-surface)] border border-white/10 rounded-xl p-4 items-center">
-
-            {/* date range */}
-            <p className="text-[var(--text-secondary)] text-sm mb-2">
-                {start} — {end}
-            </p>
+        <div className="bg-[var(--bg-surface)] border border-white/10 rounded-sm p-4 items-center">
 
             {/* controls */}
-            <div className="flex gap-4 mb-2">
-                <button className="text-[var(--text-secondary)] hover:text-white transition" onClick={handlePrevClick}>
-                    Prev
-                </button>
-                <button className="text-[var(--text-secondary)] hover:text-white transition" onClick={handleNextClick}>
-                    Next
-                </button>
+            <div className="flex gap-4 mb-2 justify-center">
+                <img src="/images/left-arrow.png" className="transition w-4 h-4" onClick={handlePrevClick} />
+                <p className="text-[var(--text-secondary)] text-[12px]">
+                    {start} — {end}
+                </p>
+                <img src="/images/right-arrow.png" className="transition w-4 h-4" onClick={handleNextClick} />
             </div>
 
             <ResponsiveContainer height={200} width="100%">
@@ -63,7 +57,7 @@ function LineChartWrapper({data, xaxis, yaxis}) {
                     <Line 
                         dataKey={yaxis} 
                         type="monotone" 
-                        stroke="#54B226"
+                        stroke="#0e9747"
                         strokeWidth={2}
                         dot={false}
                         style={{

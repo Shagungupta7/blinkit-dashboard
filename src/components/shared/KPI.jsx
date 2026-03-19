@@ -15,15 +15,15 @@ function KPI({ title, apifunction }) {
 
     const current = {
     color: "var(--text-primary)",
-    glow: "rgba(255,255,255,0.25)"};
+    glow: "rgba(255,255,255,0.10)"};
 
     return (
         <Card
             variant="soft"
             sx={{
-                width: 220,
-                height: 130,
-                borderRadius: "16px",
+                width: 180,
+                height: 80,
+                borderRadius: "10px",
                 background: "var(--bg-surface)",
                 position: "relative",
                 overflow: "hidden",
@@ -37,7 +37,7 @@ function KPI({ title, apifunction }) {
                     position: "absolute",
                     inset: 0,
                     padding: "1px",
-                    borderRadius: "16px",
+                    borderRadius: "10px",
                     background: `linear-gradient(135deg, ${current.color}, transparent)`,
                     WebkitMask:
                         "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
@@ -59,7 +59,7 @@ function KPI({ title, apifunction }) {
                     level="body-sm"
                     sx={{
                         color: "var(--text-secondary)",
-                        fontSize: 13,
+                        fontSize: 12,
                         mb: 0.5,
                         letterSpacing: "0.5px"
                     }}
@@ -69,7 +69,7 @@ function KPI({ title, apifunction }) {
 
                 <Typography
                     sx={{
-                        fontSize: 32,
+                        fontSize: 26,
                         fontWeight: 700,
                         color: current.color,
                         textShadow: `0 0 16px ${current.glow}`,

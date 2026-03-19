@@ -2,9 +2,9 @@ import { Bar, BarChart, ResponsiveContainer, Tooltip, XAxis, YAxis, CartesianGri
 
 export default function BarChartWrapper({ data, xaxis, yaxis }) {
     return (
-        <div className="flex flex-col bg-[var(--bg-surface)] border border-white/10 rounded-xl p-5 items-center">
+        <div className="bg-[var(--bg-surface)] border border-white/10 rounded-sm p-5 items-center">
             
-            <ResponsiveContainer height={300} width="100%">
+            <ResponsiveContainer height={220} width="100%">
                 <BarChart data={data}>
 
                     {/* subtle grid */}
@@ -30,8 +30,8 @@ export default function BarChartWrapper({ data, xaxis, yaxis }) {
                     {/* actual bars */}
                     <Bar 
                         dataKey={yaxis} 
-                        fill="rgba(84,178,38,0.8)"
-                        radius={[8, 8, 0, 0]}
+                        fill="#0e9747"
+                        radius={[2, 2, 0, 0]}
                         barSize={40}
                         style={{
                             filter: "drop-shadow(0px 0px 4px rgba(84,178,38,0.2))"

@@ -1,6 +1,6 @@
 import { Legend, Pie, PieChart, ResponsiveContainer, Tooltip, Cell } from "recharts";
 
-export default function PieChartWrapper({ data, datakey, name }) {
+export default function PieChartWrapper({ data, datakey, name, heading }) {
 
     const colors = [
     "#F8CB45", // Blinkit yellow
@@ -14,8 +14,9 @@ export default function PieChartWrapper({ data, datakey, name }) {
 ];
 
     return (
-        <div className="bg-[var(--bg-surface)] border border-white/10 rounded-xl p-4">
-            <ResponsiveContainer height={220} width="100%">
+        <div className="bg-[var(--bg-surface)] border border-white/10 rounded-xl p-4 space-y-4">
+            <div className="text-[var(--text-secondary)] text-[16px]">{heading}</div>
+            <ResponsiveContainer height={250} width="100%">
                 <PieChart>
 
                     <Pie

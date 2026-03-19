@@ -16,7 +16,7 @@ export default function OrdersPerCategory() {
 
     return(
         <div>
-            <PieChartWrapper data={orderData} datakey="totalOrders" name="category"/>
+            <PieChartWrapper data={orderData} datakey="totalOrders" name="category" heading="Orders Per Category"/>
         </div>
     )
 }
