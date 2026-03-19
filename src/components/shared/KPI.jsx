@@ -21,7 +21,7 @@ function KPI({ title, apifunction }) {
         <Card
             variant="soft"
             sx={{
-                width: 180,
+                width: 170,
                 height: 80,
                 borderRadius: "10px",
                 background: "var(--bg-surface)",

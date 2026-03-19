@@ -3,14 +3,14 @@ import { Legend, Pie, PieChart, ResponsiveContainer, Tooltip, Cell } from "recha
 export default function PieChartWrapper({ data, datakey, name, heading }) {
 
     const colors = [
-    "#F8CB45", // Blinkit yellow
-    "#54B226", // Blinkit green
-    "#5DADE2", // blue
-    "#AF7AC5", // purple
-    "#48C9B0", // teal
-    "#F1948A", // coral
-    "#E67E22", // orange (clearly not yellow)
-    "#85929E"  // grey
+    "#A9E5BB", // soft mint
+    "#FCF6B1", // pale yellow
+    "#F7B32B", // warm yellow/orange
+    "#F72C25", // red
+    "#54B226", // blinkit green (replaces deep plum)
+    "#424B54", // slate grey
+    "#E1CE7A", // muted gold
+    "#C5BAAF"  // warm grey
 ];
 
     return (

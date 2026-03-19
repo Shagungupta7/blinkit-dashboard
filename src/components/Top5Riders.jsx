@@ -4,33 +4,48 @@ import { useState, useEffect } from "react";
 export default function Top5Riders() {
     const [orderData, setOrderData] = useState([]);
     
-    useEffect( () => {
+    useEffect(() => {
         const fetchData = async () => {
             const data = await getTop5Riders();
             setOrderData(data);
-        }
+        };
         fetchData();
     }, []);
+
     console.log(orderData);
 
     return(
-        <div>
-            <table className="w-auto items-center border border-1 border-collapse   ">
-                <thead className="border w-full items-center">
+        <div className="bg-[var(--bg-surface)] border border-white/10 rounded-sm p-3 w-full">
+            <table className="w-full border-collapse text-sm">
+                
+                <thead className="border-b border-white/10">
                     <tr>
-                        <th className="px-4 py-2">Name</th>
-                        <th className="px-4 py-2">Time in minutes</th>
+                        <th className="px-4 py-2 text-center text-[var(--text-muted)] font-small">
+                            Name
+                        </th>
+                        <th className="px-4 py-2 text-center text-[var(--text-muted)] font-small">
+                            Time in minutes
+                        </th>
                     </tr>
                 </thead>
-                <tbody className="w-full border">
+
+                <tbody>
                     {orderData.map((rider) => (
-                        <tr key = {rider.name}>
-                            <td className="px-4 py-2">{rider.name}</td>
-                            <td className="px-4 py-2">{rider.time}</td>
+                        <tr 
+                            key={rider.name}
+                            className="border-b border-white/5 hover:bg-white/5 transition"
+                        >
+                            <td className="px-4 py-3 text-[var(--accent-primary)] text-center">
+                                {rider.name}
+                            </td>
+                            <td className="px-4 py-3 text-[var(--text-secondary)] text-center">
+                                {rider.time}
+                            </td>
                         </tr>
                     ))}
                 </tbody>
+
             </table>
         </div>
-    )
+    );
 }

@@ -1,12 +1,18 @@
 export function formatCompactNumber(num) {
-    if (num >= 1e7) return (num / 1e7).toFixed(2) + "Cr";
-    if (num >= 1e5) return (num / 1e5).toFixed(2) + "L";
-    if (num >= 1e3) return (num / 1e3).toFixed(2) + "K";
+    const format = (n, suffix) => {
+        const val = n.toFixed(1);
+        return (val.endsWith(".0") ? val.slice(0, -2) : val) + suffix;
+    };
+
+    if (num >= 1e7) return format(num / 1e7, "Cr");
+    if (num >= 1e5) return format(num / 1e5, "L");
+    if (num >= 1e3) return format(num / 1e3, "K");
     return num.toString();
 }
 
 export function formatDecimal(num) {
-    return Number(num).toFixed(2);
+    const val = Number(num).toFixed(1);
+    return val.endsWith(".0") ? val.slice(0, -2) : val;
 }
 
 export function addUnit(num, type) {
