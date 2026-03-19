@@ -28,6 +28,15 @@ function LineChartWrapper({data, xaxis, yaxis}) {
     const end = data[Math.min(data.length-1, selectedRange[0])][xaxis];
     const start = data[Math.min(data.length-1 ,selectedRange[1]-1)][xaxis];
 
+    // date formatter
+    const formatDate = (value) => {
+        const date = new Date(value);
+        return date.toLocaleDateString("en-IN", {
+            day: "numeric",
+            month: "short"
+        });
+    };
+
     return(
         <div className="bg-[var(--bg-surface)] border border-white/10 rounded-sm p-4 items-center">
 
@@ -35,7 +44,7 @@ function LineChartWrapper({data, xaxis, yaxis}) {
             <div className="flex gap-4 mb-2 justify-center">
                 <img src="/images/left-arrow.png" className="transition w-4 h-4" onClick={handlePrevClick} />
                 <p className="text-[var(--text-secondary)] text-[12px]">
-                    {start} — {end}
+                    {formatDate(start)} — {formatDate(end)}
                 </p>
                 <img src="/images/right-arrow.png" className="transition w-4 h-4" onClick={handleNextClick} />
             </div>
@@ -47,6 +56,7 @@ function LineChartWrapper({data, xaxis, yaxis}) {
                         dataKey={xaxis}
                         stroke="#A0A0A0"
                         tick={{ fill: "#A0A0A0", fontSize: 12 }}
+                        tickFormatter={(value) => formatDate(value)}
                     />
 
                     <YAxis
@@ -66,6 +76,7 @@ function LineChartWrapper({data, xaxis, yaxis}) {
                     />
 
                     <Tooltip
+                        labelFormatter={(label) => formatDate(label)}
                         contentStyle={{
                             backgroundColor: "#1E1E1E",
                             border: "none",

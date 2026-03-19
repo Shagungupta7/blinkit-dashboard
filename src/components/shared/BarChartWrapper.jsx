@@ -1,4 +1,5 @@
 import { Bar, BarChart, ResponsiveContainer, Tooltip, XAxis, YAxis, CartesianGrid } from "recharts";
+import { formatCompactNumber } from "../../utils/formatters";
 
 export default function BarChartWrapper({ data, xaxis, yaxis }) {
     return (
@@ -10,7 +11,7 @@ export default function BarChartWrapper({ data, xaxis, yaxis }) {
                     {/* subtle grid */}
                     <CartesianGrid stroke="rgba(255,255,255,0.05)" vertical={false} />
 
-                    {/* x axis */}
+                    {/* x axis (UNCHANGED) */}
                     <XAxis 
                         dataKey={xaxis} 
                         stroke="#A0A0A0"
@@ -19,12 +20,13 @@ export default function BarChartWrapper({ data, xaxis, yaxis }) {
                         tickLine={false}
                     />
 
-                    {/* y axis */}
+                    {/* y axis (WITH FORMATTER) */}
                     <YAxis 
                         stroke="#A0A0A0"
                         tick={{ fill: "#A0A0A0", fontSize: 12 }}
                         axisLine={false}
                         tickLine={false}
+                        tickFormatter={(value) => formatCompactNumber(value)}
                     />
 
                     {/* actual bars */}
@@ -40,6 +42,7 @@ export default function BarChartWrapper({ data, xaxis, yaxis }) {
 
                     {/* tooltip */}
                     <Tooltip
+                        formatter={(value) => formatCompactNumber(value)}
                         contentStyle={{
                             backgroundColor: "#1E1E1E",
                             border: "none",
