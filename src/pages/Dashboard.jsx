@@ -55,7 +55,7 @@ export default function Dashboard() {
 
     return(
         <>
-    <div className="flex flex-col justify-center items-center gap-3 w-full p-2">
+    <div className="flex flex-col justify-center items-center gap-3 w-full">
         <div className="flex flex-col items-center my-2">
             <div className="text-3xl font-semibold tracking-wide">
                 <span className="text-[var(--accent-primary)] drop-shadow-[0_0_12px_rgba(255,225,65,0.45)]">BLINK</span>
@@ -141,20 +141,6 @@ export default function Dashboard() {
                 </div>
             </div>
         </div>
-        {/* <div className="font-inter text-[30px] font-semibold">
-            DEMAND
-        </div>
-        <div className="w-full gap-12">
-            
-        </div>
-        <div className="font-inter text-[30px] font-semibold">
-            OPERATIONAL
-        </div>
-        <div className="w-full gap-12">
-                
-        </div>
-        
-        */}
     </div>
     </>
     )

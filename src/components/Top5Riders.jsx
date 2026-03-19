@@ -15,15 +15,15 @@ export default function Top5Riders() {
     console.log(orderData);
 
     return(
-        <div className="bg-[var(--bg-surface)] border border-white/10 rounded-xl p-6 w-full max-w-xl mx-auto">
+        <div className="bg-[var(--bg-surface)] border border-white/10 rounded-sm p-3 w-full">
             <table className="w-full border-collapse text-sm">
                 
                 <thead className="border-b border-white/10">
                     <tr>
-                        <th className="px-4 py-2 text-left text-[var(--text-muted)] font-medium">
+                        <th className="px-4 py-2 text-center text-[var(--text-muted)] font-small">
                             Name
                         </th>
-                        <th className="px-4 py-2 text-left text-[var(--text-muted)] font-medium">
+                        <th className="px-4 py-2 text-center text-[var(--text-muted)] font-small">
                             Time in minutes
                         </th>
                     </tr>
@@ -35,10 +35,10 @@ export default function Top5Riders() {
                             key={rider.name}
                             className="border-b border-white/5 hover:bg-white/5 transition"
                         >
-                            <td className="px-4 py-3 text-[var(--accent-primary)]">
+                            <td className="px-4 py-3 text-[var(--accent-primary)] text-center">
                                 {rider.name}
                             </td>
-                            <td className="px-4 py-3 text-[var(--text-secondary)]">
+                            <td className="px-4 py-3 text-[var(--text-secondary)] text-center">
                                 {rider.time}
                             </td>
                         </tr>
