@@ -21,17 +21,17 @@ export default function Dashboard() {
 
     const tabs = {
         demand: [
-            { key: "OrderPerHour", label: "Hourly Orders", component: <OrdersPerHour /> },
-            { key: "OrderPerCity", label: "City Orders", component: <OrdersPerCity /> },
-            { key: "ZoneWiseDistribution", label: "Zone Dist.", component: <ZoneWiseDistribution /> },
-            { key: "orderPerDay", label: "Daily Orders", component: <OrderPerDay /> },
+            { key: "orderPerDay", label: "Orders Per Day", component: <OrderPerDay /> },
+            { key: "OrderPerHour", label: "Orders Per Hour", component: <OrdersPerHour /> },
+            { key: "OrderPerCity", label: "Orders Per City", component: <OrdersPerCity /> },
+            { key: "ZoneWiseDistribution", label: "Zone wise Distribution", component: <ZoneWiseDistribution /> },  
         ],
         operational: [
-            { key: "DeliveryTimePerHour", label: "Hourly Time", component: <DeliveryTimePerHour /> },
+            { key: "DeliveryTimePerHour", label: "Time per Hour", component: <DeliveryTimePerHour /> },
             { key: "AvgDeliveryTimePerCity", label: "Avg Time / City", component: <AvgDeliveryTimePerCity /> },
             { key: "RevenuePerCity", label: "City Revenue", component: <RevenuePerCity /> },
-            { key: "CancellationPerCity", label: "Cancel Rate", component: <CancellationPerCity /> },
-            { key: "RiderUtilization", label: "Rider Util.", component: <RiderUtilization /> },
+            { key: "CancellationPerCity", label: "Cancel Rate per City", component: <CancellationPerCity /> },
+            { key: "RiderUtilization", label: "Rider Utilisation", component: <RiderUtilization /> },
             { key: "RiderPerCity", label: "Riders / City", component: <RiderPerCity /> },
         ],
         };
